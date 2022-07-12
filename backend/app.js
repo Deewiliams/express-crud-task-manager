@@ -3,13 +3,11 @@ const app = express();
 const tasks = require('./routes/tasks')
 const connectDB = require('./db/connect')
 const dotenv = require("dotenv");
-
 dotenv.config();
 
 // middleware
 app.use(express.json())
 //routes
-
 
 app.get('/hello', (req,res) => {
     res.send('Task Manger App')
@@ -28,7 +26,6 @@ const start = async () => {
         console.log(error);
     }
 }
-
 start()
 
 
